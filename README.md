@@ -1,3 +1,4 @@
+# On the Validity of Modeling SGD with Stochastic Differential Equations
 This repository has the code for [On the Validity of Modeling SGD with Stochastic Differential Equations (SDEs)](https://arxiv.org/abs/2102.12470) by Zhiyuan Li, Sadhika Malladi, and Sanjeev Arora, published in NeurIPS 2021.
 
 # Pre-Requisites
