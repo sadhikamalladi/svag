@@ -1,0 +1,4 @@
+from .cifar10_hparams_dict import *
+from .two_layer_hparams_dict import *
+from .fc_vs_cnn_hparams_dict import *
+from .hparams import *
