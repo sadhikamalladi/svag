@@ -17,21 +17,21 @@ This codebase uses PyTorch Lightning (1.0.8). To train a model, run `python trai
 
 Below are the configurations to reproduce the figures presented in the paper. Pass them through the `-c` flag to `train.py` to reproduce the results in the paper. To test with SVHN or CIFAR-100, use the flags `-svhn` and `-c100` respectively. 
 
-###SVAG Convergence
+### SVAG Convergence
 
 The $B=64$ setting can be run using `preresnet32_b64_sde1_k{l_val}`, where `l_val` is the value of $l$ desired (e.g., 1 to 32). The $B=1024$ setting can be run using `preresnet32_b1024_sde1_k{l_val}`.
 
-###Verification of Linear Scaling Rule Theory
+### Verification of Linear Scaling Rule Theory
 
 The PreResNet-32 with BatchNorm results (left) can be reproduced with `preresnet32_simple_b{batch_size}_linscale`, where `batch_size` is the desired batch size (in the figure, 2 to 2048). The PreResNet-32 with GroupNorm results (center) can be reproduced with `preresnet32_simple_gn_b{batch_size}_linscale`. The VGG19 with GroupNorm results (right) can be reproduced with `vgg19_simple_gn_b{batch_size}_linscale`.
 
 In all cases, the learning rate will be scaled per the linear scaling rule with a baseline of $B=128$ and $\eta=0.8$. $G_t$ and $N_t$ are measured by taking the average in the last 50 epochs of the first phase (i.e., epochs 200 to 250).
 
-###SGD and NGD Trajectories
+### SGD and NGD Trajectories
 
 The NGD trajectory can be run with `preresnet32_gn_ngd_50k_b500_accumu_5`, and the corresponding SGD baseline is `preresnet32_gn_ngd_base_50k_b500`. Note that we smoothed the training accuracy by dividing the trajectory into 100-step intervals and recording the average over each interval. NGD is compute intensive, so we recommend running it on multiple GPUs (we used 4).
 
-###SVAG Baselines and Large Batch
+### SVAG Baselines and Large Batch
 
 PreResNet-32 with BN and batch size 128 (left) can be run with `preresnet32_b128_sde1_k{l_val}`where `l_val` is the value of $l$. PreResNet-32 with BN and batch size 1024 (center) can be run with `preresnet32_b1024_sde1_k{l_val}`, and PreResNet-32 with GN and batch size 128 (right) can be run with `preresnet32_gn_b128_sde1_k{l_val}`.
 
