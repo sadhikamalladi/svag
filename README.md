@@ -1,3 +1,5 @@
+This repository has the code for [On the Validity of Modeling SGD with Stochastic Differential Equations (SDEs)](https://arxiv.org/abs/2102.12470) by Zhiyuan Li, Sadhika Malladi, and Sanjeev Arora, published in NeurIPS 2021.
+
 # Pre-Requisites
 We provide a `environment.yml` file that contains the packages required. Running `conda env create -f environment.yml` will duplicate the conda environment under the name `sde`. 
 
